@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "node --watch app.js",
-    "start": "node server"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
