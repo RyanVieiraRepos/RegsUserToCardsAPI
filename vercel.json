@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
         {
-            "src": "./form.js",
+            "src": "Backend/form.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "./(.*)",
-            "dest": "/"
+            "dest": "Backend/app.js"
         }
     ]
 }
