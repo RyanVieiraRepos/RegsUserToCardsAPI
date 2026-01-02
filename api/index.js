@@ -3,6 +3,7 @@ const app = express()
 
 app.use(express.json())
 
+
 app.get('/', (req, res) => {
     res.send('Olá Node')
 })
