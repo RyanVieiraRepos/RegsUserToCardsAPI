@@ -1,8 +1,15 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 
 app.use(express.json())
+app.use(cors({
+    origin: ["https://user-reg-to-cards.vercel.app/", "https://locahost:3000/npm"]
+}))
 
+
+
+//
 
 app.get('/', (req, res) => {
     res.send('Olá Node')
@@ -25,13 +32,14 @@ app.get('/exibir', (req, res) => {
         descrição: "brasileiro, nascido no interior de SP"
     }
 
-
-
-
     res.json(usuarios)
-
-
 })
 
 
+
+
+
+
 module.exports = app
+
+
