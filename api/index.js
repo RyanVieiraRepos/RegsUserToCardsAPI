@@ -41,7 +41,7 @@ app.post('/registrar', (req, res) => {
 //pegar do banco e devolver lista de objetos
 app.get('/getUsers', (req, res) => {
 
-    usuarios: [{
+    usuarios = [{
         nome: "Ryan Vieira Assumpção",
         idade: "20",
         descrição: "Brasileiro, nascido no interior de SP"
