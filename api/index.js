@@ -5,10 +5,10 @@ const cors = require('cors')
 const mysql = require('mysql')
 
 const connection = mysql.createConnection({
-    host: "",
-    user: "",
+    host: "localhost",
+    user: "root",
     password: "",
-    database: ""
+    database: "user"
 })
 
 
@@ -17,7 +17,7 @@ connection.connect()
 app.use(express.json())
 app.use(cors())
 
-const port = process.env.PORT || 3000
+
 
 
 
@@ -34,14 +34,14 @@ app.get('/', (req, res) => {
 
 //mandar pro banco um JSON
 app.post('/registrar', (req, res) => {
-
+    res.status(200).send("user registered")
 })
 
 
 //pegar do banco e devolver lista de objetos
 app.get('/getUsers', (req, res) => {
 
-    usuarios = [{
+    var usuarios = [{
         nome: "Ryan Vieira Assumpção",
         idade: "20",
         descrição: "Brasileiro, nascido no interior de SP"
@@ -65,5 +65,5 @@ app.get('/getUsers', (req, res) => {
 
 
 
-module.exports = app
-//app.listen(3000)
+//module.exports = app
+app.listen(3000)
